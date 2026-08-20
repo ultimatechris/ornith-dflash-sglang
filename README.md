@@ -56,16 +56,25 @@ newer GPUs. Keep `transformers` at `5.12.1` with SGLang `0.5.17`.
 
 ## Reproduce the evaluation
 
-`pod_run.sh` runs the server configurations and writes the results. For a
-single running server, `eval_harness.py` measures:
+Start SGLang with one configuration at a time, then run `eval_harness.py`.
+For each running server, the harness measures:
 
 - decode throughput, excluding prefill
 - accepted draft length from SGLang
 - GSM8K exact-match accuracy
 - HumanEval pass@1 using the provided unit tests
 
-The server flags and benchmark sizes are in `config.py`. Running the harness
-generates the result files locally.
+The server flags and benchmark sizes are in `config.py`. For example:
+
+```bash
+python eval_harness.py run --config baseline \
+  --url http://127.0.0.1:30000 --model-dir /path/to/base_model
+python eval_harness.py run --config dflash_bs16 \
+  --url http://127.0.0.1:30000 --model-dir /path/to/base_model
+python eval_harness.py report
+```
+
+The harness generates the result files locally.
 
 ## License
 

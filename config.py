@@ -112,11 +112,3 @@ GREEDY = True              # temperature 0 -> spec decoding is exact vs baseline
 # Decode tps is measured client-side from the streamed response:
 #   decode_tps = (completion_tokens - 1) / (t_last_token - t_first_token)
 # which excludes prefill/TTFT. Acceptance comes from SGLang meta_info.
-
-# ---------------------------------------------------------------------------
-# Deliverable
-# ---------------------------------------------------------------------------
-# Report only (no weights). Pushed to a private HF repo so it survives a lost
-# session; also retrieved locally and committed to the experiment folder.
-HF_RESULTS_REPO = "ultimatechris/ornith15-9b-decode-sglang"
-HF_PRIVATE = True
