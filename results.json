@@ -1,0 +1,69 @@
+{
+  "baseline": {
+    "gsm8k": {
+      "n": 120,
+      "median_decode_tps": 44.81,
+      "mean_accept_length": null,
+      "pass_rate": 0.9167
+    },
+    "humaneval": {
+      "n": 120,
+      "median_decode_tps": 44.79,
+      "mean_accept_length": null,
+      "pass_rate": 0.7917
+    },
+    "overall_median_decode_tps": 44.8,
+    "speedup_vs_baseline": 1.0
+  },
+  "dflash_bs16": {
+    "gsm8k": {
+      "n": 120,
+      "median_decode_tps": 186.22,
+      "mean_accept_length": 6.478,
+      "pass_rate": 0.9083
+    },
+    "humaneval": {
+      "n": 120,
+      "median_decode_tps": 244.96,
+      "mean_accept_length": 8.517,
+      "pass_rate": 0.8083
+    },
+    "lossless_exact_frac": 0.5333,
+    "overall_median_decode_tps": 207.48,
+    "speedup_vs_baseline": 4.631
+  },
+  "dflash_bs24": {
+    "gsm8k": {
+      "n": 120,
+      "median_decode_tps": 171.5,
+      "mean_accept_length": 6.548,
+      "pass_rate": 0.9083
+    },
+    "humaneval": {
+      "n": 120,
+      "median_decode_tps": 241.89,
+      "mean_accept_length": 9.063,
+      "pass_rate": 0.825
+    },
+    "lossless_exact_frac": 0.5083,
+    "overall_median_decode_tps": 197.92,
+    "speedup_vs_baseline": 4.418
+  },
+  "dflash_bs32": {
+    "gsm8k": {
+      "n": 120,
+      "median_decode_tps": 164.84,
+      "mean_accept_length": 6.504,
+      "pass_rate": 0.9
+    },
+    "humaneval": {
+      "n": 120,
+      "median_decode_tps": 236.46,
+      "mean_accept_length": 9.032,
+      "pass_rate": 0.8167
+    },
+    "lossless_exact_frac": 0.5583,
+    "overall_median_decode_tps": 185.92,
+    "speedup_vs_baseline": 4.15
+  }
+}
