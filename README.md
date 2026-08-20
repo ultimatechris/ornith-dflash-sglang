@@ -64,8 +64,8 @@ single running server, `eval_harness.py` measures:
 - GSM8K exact-match accuracy
 - HumanEval pass@1 using the provided unit tests
 
-The commands and settings are in `config.py` and `program.md`. The published
-results are in `results.json`.
+The server flags and benchmark sizes are in `config.py`. Running the harness
+generates the result files locally.
 
 ## License
 

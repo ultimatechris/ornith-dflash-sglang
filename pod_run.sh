@@ -33,7 +33,7 @@ if not tok: raise SystemExit(0)
 api=HfApi(token=tok); repo=config.HF_RESULTS_REPO
 create_repo(repo, private=config.HF_PRIVATE, repo_type="model", exist_ok=True, token=tok)
 for f in (glob.glob("results/*.json")+glob.glob("results/*.md")+glob.glob("results/*.txt")
-          +glob.glob("results/*.log")+["config.py","program.md","README.md"]):
+          +glob.glob("results/*.log")+["config.py","README.md"]):
     if os.path.exists(f):
         try: api.upload_file(path_or_fileobj=f, path_in_repo=("logs/"+os.path.basename(f) if f.endswith(".log") else os.path.basename(f)), repo_id=repo, token=tok)
         except Exception as e: print("skip",f,e)
