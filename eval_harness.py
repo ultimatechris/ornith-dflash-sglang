@@ -28,7 +28,8 @@ from pathlib import Path
 
 import requests
 
-import config
+import importlib
+config = importlib.import_module(os.environ.get("ORNITH_CONFIG", "config_9b"))
 
 RESULTS = Path("results")
 RESULTS.mkdir(exist_ok=True)
